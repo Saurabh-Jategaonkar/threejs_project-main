@@ -48,12 +48,12 @@ const Customizer = () => {
     }
   }
 
-  const handleSubmit = async (type) => {
-    if (!prompt) return alert("Please enter a prompt.")
+  // const handleSubmit = async (type) => {
+  //   if (!prompt) return alert("Please enter a prompt.")
 
-    try {
+  //   try {
       // call our backend to generate an ai image
-      setGeneratingImg(true);
+      // setGeneratingImg(true);
       
       // const response = await fetch('http://localhost:8080/api/v1/dalle', {
       //   method: 'POST',
@@ -67,16 +67,16 @@ const Customizer = () => {
 
       // const data = await response.json();
 
-      const data = { photo: ''};
+  //     const data = { photo: ''};
 
-      handleDecals(type, `data:image/png;base64, ${data.photo}`)
-    } catch (error) {
-      alert(error)
-    } finally {
-      setGeneratingImg(false);
-      setActiveEditorTab("");
-    }
-  }
+  //     handleDecals(type, `data:image/png;base64, ${data.photo}`)
+  //   } catch (error) {
+  //     alert(error)
+  //   } finally {
+  //     setGeneratingImg(false);
+  //     setActiveEditorTab("");
+  //   }
+  // }
 
   const handleDecals = (type, result) => {
     const decalType = DecalTypes[type];
