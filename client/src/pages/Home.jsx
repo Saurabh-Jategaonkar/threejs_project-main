@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, color } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 
 import state from '../store';
@@ -33,7 +33,7 @@ const Home = () => {
                             </h1>
                         </motion.div>
                         <motion.div {...headContentAnimation} className='flex flex-col gap-5'>
-                            <p className='max-w-md font-normal text-gray-600 text-base'>
+                            <p className='max-w-md font-normal text-base'>
                                 Create your own unique styled shirt with this brand-new 3D
                                 customization tool. <strong>Unleash your imagination!</strong>
                                 {" "} and define your own drip!
@@ -45,6 +45,9 @@ const Home = () => {
                                 handleClick={() => state.intro = false}
                                 customStyles='w-fit px-4 py-2.5 font-bold text-sm'
                             />
+                            <p className='text-white'>
+                                Hire me : jategaonkarsaurabh58@gmail.com
+                            </p>
                         </motion.div>
                     </motion.div>
                 </motion.section>
